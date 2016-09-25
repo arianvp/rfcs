@@ -26,6 +26,15 @@ Its semantics and interaction with other syntax has been a surprise to some, for
 
 Unlike a mere function, it is not readily used as an argument to such functions as ``liftA3`` and ``zipWith3``.
 
+In many cases, pattern guards can rather be used::
+
+	x = if p then a else b
+
+vs
+::
+
+	x | p = a | otherwise = b
+
 
 ###############
 Detailed design
